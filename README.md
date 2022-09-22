@@ -32,7 +32,6 @@ npm run dev
 | POST   | /movies  | Create a movies |
 | PUT    | /movies/:id | Update a movie by id |
 | DELETE | /movies/:id | Delete a movie by id |
-|
 
 #### Characters
 
