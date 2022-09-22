@@ -1,0 +1,47 @@
+{
+  "name": "filmsdisneyapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didierrevelo/filmsDisneyApi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/didierrevelo/filmsDisneyApi/issues"
+  },
+  "homepage": "https://github.com/didierrevelo/filmsDisneyApi#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "@slack/webhook": "^6.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.4",
+    "mongoose-delete": "^0.5.4",
+    "mongoose-paginate-v2": "^1.7.1",
+    "morgan-body": "^2.6.8",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "node-env-file": "^0.1.8",
+    "nodemailer": "^6.7.8",
+    "nodemon": "^2.0.19",
+    "sequelize": "^6.21.3",
+    "swagger-jsdoc": "^6.2.5",
+    "swagger-ui-express": "^4.5.0",
+    "to": "^0.2.9",
+    "update": "^0.4.2"
+  }
+}
