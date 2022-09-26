@@ -1,27 +1,27 @@
-const { sequelize } = require('../../../config/db');
-const { DataTypes } = require('sequelize');
-const Storage = require('./storage');
+const { sequelize } = require("../../../config/config");
+const { DataTypes } = require("sequelize");
+const Storage = require("./storage");
 
 const Gender = sequelize.define(
-  'gender',
+  "gender",
   {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      allowNull: false
+      allowNull: false,
     },
     Name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     Movie: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     mediaId: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
   },
   {
@@ -32,9 +32,9 @@ const Gender = sequelize.define(
 /**
  * implementar metodo propio con relaion Storage
  */
- Gender.findByAllData = function () {
+Gender.findByAllData = function () {
   Gender.belongsTo(Storage, {
-    foreignKey: 'mediaId',
+    foreignKey: "mediaId",
   });
   return Gender.findAll({ include: Storage });
 };
@@ -44,14 +44,13 @@ const Gender = sequelize.define(
  */
 Gender.findOneData = function (id) {
   Gender.belongsTo(Storage, {
-    foreignKey: 'mediaId',
+    foreignKey: "mediaId",
   });
   return Gender.findOne({
     where: { id },
-    include: Storage
+    include: Storage,
   });
 };
-
 
 /**
  * implementar metodo propio para actualizar un registro
@@ -69,12 +68,12 @@ Gender.updateData = async function (id, data) {
  * implementar metodo propio para eliminar un registro
  */
 Gender.deleteData = function (idData) {
-  let id = Number(idData._id)
+  let id = Number(idData);
   return Gender.destroy({
     where: { id },
   }).then(() => {
     return `Gender with id ${id} was deleted`;
-   });
-}
+  });
+};
 
 module.exports = Gender;
