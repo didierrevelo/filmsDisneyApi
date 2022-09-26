@@ -45,4 +45,4 @@ app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
 
-(ENGINE_DB === 'mysql') ? dbConnectMysql() : dbConnect();
+(ENGINE_DB === 'mysql') ? dbConnectMysql({ mockdata: 'true' }) : dbConnect();
