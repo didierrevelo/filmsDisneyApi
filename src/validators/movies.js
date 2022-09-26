@@ -14,10 +14,6 @@ const validatorCreateItem = [
     .exists()
     .notEmpty()
     .withMessage('Score is required'),
-  check('associated_characters')
-    .exists()
-    .notEmpty()
-    .withMessage('associated_characters is required'),
   check('mediaId')
     .exists()
     .notEmpty(),
